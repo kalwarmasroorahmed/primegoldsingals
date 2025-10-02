@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PRIME GOLD — Portfolio</title>
+  <meta name="description" content="Prime Gold Signals — Professional XAU/USD & Forex Signals" />
+  <meta name="theme-color" content="#0b0f14" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '806888535406371');
+  fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    /* ========== Reset & Base ========== */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;background:#070a0e;color:#e7e7e7}
+    img{max-width:100%;display:block}
+    a{color:inherit}
+
+    /* ========== Theme ========== */
+    :root{
+      --accent:#f6c23e; /* gold */
+      --muted:#a3a9b2;
+      --surface:#0b1118;
+      --card:#0e1621;
+      --glass:rgba(255,255,255,0.05);
+      --border:rgba(255,255,255,0.06);
+      --shadow:0 10px 30px rgba(0,0,0,0.45);
+    }
+
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* ========== Header ========== */
+    header{position:fixed;left:0;right:0;top:0;background:rgba(8,12,17,0.85);backdrop-filter:blur(8px);z-index:80;border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo h1{font-size:18px;color:var(--accent);letter-spacing:0.6px;white-space:nowrap}
+    .logo img{height:32px;width:auto}
+
+    nav{display:flex;align-items:center;gap:18px}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    .btn{background:var(--accent);color:#101010;padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:var(--shadow)}
+    .btn:hover{filter:brightness(1.05)}
+
+    /* Mobile nav */
+    .hamburger{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:rgba(255,255,255,0.04);align-items:center;justify-content:center;color:var(--muted);cursor:pointer}
+    .hamburger:hover{color:var(--accent)}
+    .mobile-panel{display:none;position:fixed;inset:60px 12px auto 12px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px;z-index:85}
+    .mobile-panel a{display:block;padding:12px 10px;border-radius:10px;color:#d9dee3}
+    .mobile-panel a:hover{background:rgba(255,255,255,0.05);color:var(--accent)}
+
+    main{padding-top:72px}
+
+    /* ========== Hero ========== */
+    .hero{position:relative;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:0;background:url('BG.png') center/cover no-repeat;filter:saturate(0.9) brightness(0.8);z-index:-2}
+    .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(1200px 420px at 20% 10%, rgba(246,194,62,0.15), transparent 60%), linear-gradient(180deg, rgba(7,10,14,0.1) 0%, rgba(7,10,14,1) 75%);z-index:-1}
+    .hero .hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding:64px 0 40px}
+    .hero h2{font-size:40px;color:var(--accent);letter-spacing:0.6px}
+    .hero p{color:#d2d7dd;max-width:860px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+    .badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+    .badge{padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,0.03);color:#d7dbdf;font-weight:600;font-size:12px}
+
+    .hero-visual{width:100%;max-width:980px;border-radius:16px;overflow:hidden;border:1px solid var(--border);background:rgba(255,255,255,0.02)}
+
+    /* ========== Sections ========== */
+    section{padding:48px 0}
+    .section-title{font-size:28px;margin-bottom:18px;text-align:center;color:var(--accent)}
+
+    /* Cards grid */
+    .grid-3{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));padding:18px;border-radius:14px;border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .28s ease,box-shadow .28s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,0.55)}
+    .card h3{color:var(--accent);margin-bottom:8px}
+    .card p{color:var(--muted);font-size:14px}
+
+    /* Stats */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+    .stat{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:20px;border-radius:12px;border:1px solid var(--border)}
+    .stat h4{font-size:26px;color:var(--accent)}
+    .stat p{color:var(--muted)}
+
+    /* Testimonials */
+    .test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .testimonial{background:var(--glass);padding:18px;border-radius:12px;border:1px solid var(--border)}
+    .testimonial p{color:#e9eef2}
+    .testimonial h5{color:var(--accent);margin-top:12px}
+
+    /* Carousel */
+    .carousel-wrap{max-width:900px;margin:0 auto;position:relative}
+    .carousel-viewport{overflow:hidden;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,0.02)}
+    .carousel-track{display:flex;transition:transform .6s cubic-bezier(.2,.9,.2,1)}
+    .slide{min-width:100%;user-select:none}
+    .slide img{width:auto;height:clamp(auto, 55vh, auto);object-fit:cover;display:block}
+    .caption{position:absolute;left:20px;bottom:22px;padding:10px 14px;border-radius:8px;background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.65));color:#fff;font-weight:700;transform:translateY(18px);opacity:0;transition:opacity .45s ease,transform .45s ease}
+    .caption.show{opacity:1;transform:translateY(0)}
+
+    /* Carousel controls */
+    .controls{position:absolute;right:18px;top:18px;display:flex;gap:10px}
+    .ctrl-btn{background:rgba(255,255,255,0.06);border:1px solid var(--border);padding:8px 10px;border-radius:10px;color:var(--muted);cursor:pointer}
+    .ctrl-btn:hover{color:var(--accent)}
+
+    /* Dots */
+    .dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
+    .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.08);cursor:pointer;border:1px solid var(--border)}
+    .dot.active{background:var(--accent)}
+
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.88);display:flex;align-items:center;justify-content:center;z-index:120;opacity:0;pointer-events:none;transition:opacity .28s}
+    .lightbox.show{opacity:1;pointer-events:auto}
+    .lightbox-content{max-width:1100px;width:92%;background:transparent;text-align:center}
+    .lightbox img{width:100%;height:auto;border-radius:10px}
+    .lightbox-caption{color:#fff;margin-top:12px;font-weight:700}
+    .lb-close{position:fixed;right:20px;top:16px;background:rgba(255,255,255,0.06);padding:10px;border-radius:999px;color:var(--muted);cursor:pointer;border:1px solid var(--border)}
+
+    /* FAQ */
+    .faq .item{background:rgba(255,255,255,0.04);padding:16px;border-radius:12px;border:1px solid var(--border)}
+
+    /* CTA */
+    .cta{background:linear-gradient(90deg,#1f2937 0%, #111827 100%);padding:34px;border-radius:14px;text-align:center;border:1px solid var(--border)}
+    .cta a{display:inline-block;margin-top:12px}
+
+    /* Footer */
+    footer{padding:28px 0;border-top:1px solid var(--border);margin-top:26px}
+    footer .f-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    footer a{color:var(--accent);text-decoration:none}
+
+    /* ========== Responsive ========== */
+    @media (max-width:1000px){
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .test-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:900px){
+      nav#mainNav{display:none}
+      .hamburger{display:inline-flex}
+      .hero h2{font-size:32px}
+    }
+    @media (max-width:700px){
+      .grid-3{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .nav-inner{padding:12px}
+      .hero h2{font-size:28px}
+    }
+
+    /* Small animations */
+    .fade-up{opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease}
+    .fade-up.show{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+  <!-- Meta Pixel Fallback (noscript) -->
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=806888535406371&ev=PageView&noscript=1" alt=""/></noscript>
+
+  <header>
+    <div class="container nav-inner">
+      <button id="hamburger" class="hamburger" aria-label="Open menu" aria-controls="mobilePanel" aria-expanded="false">☰</button>
+      <div class="logo">
+        <img src="Logo.png" alt="Prime Gold Logo">
+        <h1>PRIME GOLD</h1>
+      </div>
+      <nav id="mainNav" aria-label="Main Navigation">
+        <a href="#features">Features</a>
+        <a href="#performance">Performance</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#analysis">Analysis</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn" href="https://t.me/LEARN_GOLD_TRADING" target="_blank" rel="noopener">Join Telegram</a>
+    </div>
+    <div id="mobilePanel" class="mobile-panel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <a href="#features">Features</a>
+      <a href="#performance">Performance</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#analysis">Analysis</a>
+      <a href="#faq">FAQ</a>
+      <div style="height:10px"></div>
+      <a class="btn" href="https://t.me/LEARN_GOLD_TRADING" target="_blank" rel="noopener">Join Free Telegram</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h2>PRIME GOLD SIGNALS</h2>
+        <p>Professional XAU/USD & Forex Signals — accurate entries, strong risk management, and transparent performance. Join thousands of traders building consistent profits.</p>
+
+        <div class="badge-row" aria-label="highlights">
+          <span class="badge">Real-time Updates</span>
+          <span class="badge">85%+ Win Rate</span>
+          <span class="badge">Risk Management First</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn" href="https://t.me/LEARN_GOLD_TRADING" target="_blank" rel="noopener">🚀 Join Free Channel</a>
+          <a class="btn" href="https://t.me/BULL_XAUUSD_TRADING" target="_blank" rel="noopener">📈 Bull XAU/USD</a>
+          <a class="btn" href="https://t.me/goldxsign" target="_blank" rel="noopener">⭐ GOLD X Sign</a>
+        </div>
+
+        <div class="hero-visual" role="img" aria-label="Dark forex trading visual"></div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+      <div class="container">
+        <div class="section-title">Why Choose Us?</div>
+        <div class="grid-3">
+          <div class="card fade-up"> <h3>Daily Accurate Signals</h3><p>Clear entries, stop-loss & take-profit levels delivered in real-time.</p></div>
+          <div class="card fade-up"> <h3>85%+ Win Rate</h3><p>Proven track record across multiple market conditions.</p></div>
+          <div class="card fade-up"> <h3>Risk Management</h3><p>Capital protection first — we teach position sizing & SL discipline.</p></div>
+          <div class="card fade-up"> <h3>Active Community</h3><p>Join 1k+ traders sharing results, feedback & ideas.</p></div>
+          <div class="card fade-up"> <h3>Account Management</h3><p>We professionally manage accounts on a 50/50 profit-share basis.</p></div>
+          <div class="card fade-up"> <h3>24/7 Support</h3><p>Fast responses — reach analysts any time for clarifications.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Performance -->
+    <section id="performance" aria-labelledby="performanceTitle">
+      <div class="container">
+        <h3 id="performanceTitle" class="section-title">Performance Snapshot</h3>
+        <div class="stats">
+          <div class="stat fade-up"><h4>200+</h4><p>Total Trades</p></div>
+          <div class="stat fade-up"><h4>85%+</h4><p>Win Rate</p></div>
+          <div class="stat fade-up"><h4>$2M+</h4><p>Community Profits</p></div>
+          <div class="stat fade-up"><h4>1:2.3</h4><p>Avg Risk:Reward</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-title">What Traders Say</div>
+        <div class="test-grid">
+          <div class="testimonial fade-up"><p>“Prime Gold Signals changed my trading game. Precise signals with clear targets. I doubled my account in 2 months.”</p><h5>Ali Khan — Dubai, UAE</h5></div>
+          <div class="testimonial fade-up"><p>“The best part is the accuracy. No stress, no confusion—just clean signals with solid profits.”</p><h5>Sophia R. — Madrid, Spain</h5></div>
+          <div class="testimonial fade-up"><p>“Started with $500, grew it to $2,000 following only their gold signals. Highly recommended.”</p><h5>Rahul M. — Mumbai, India</h5></div>
+          <div class="testimonial fade-up"><p>“Real-time updates are a game changer. I catch trades instantly and lock profits daily.”</p><h5>Emily J. — Sydney, Australia</h5></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analysis Carousel + Lightbox -->
+    <section id="analysis">
+      <div class="container">
+        <div class="section-title">Forex Analysis & Client Profits</div>
+
+        <div class="carousel-wrap">
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carouselTrack">
+              <div class="slide"><img src="analysis.png" alt="Trading View Analysis"><div class="caption">Trading View Analysis</div></div>
+              <div class="slide"><img src="profit.png" alt="Client Profit - Sept 2025"><div class="caption">Client Profit</div></div>
+              <div class="slide"><img src="profit2.jpg" alt="Client Profit - Aug 2025"><div class="caption">Client Profit – Aug 2025</div></div>
+              <div class="slide"><img src="profit3.jpg" alt="XAU/USD Analysis - July 2025"><div class="caption">XAU/USD Analysis – July 2025</div>
+            </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="controls">
+            <button class="ctrl-btn" id="prevBtn" aria-label="Previous slide">◀</button>
+            <button class="ctrl-btn" id="nextBtn" aria-label="Next slide">▶</button>
+          </div>
+
+          <!-- Dots -->
+          <div class="dots" id="dots" aria-label="Slide indicators"></div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+          <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+          <div class="lightbox-content">
+            <img id="lbImage" src="" alt="Expanded view">
+            <div class="lightbox-caption" id="lbCaption"></div>
+            <div style="margin-top:10px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+              <button class="ctrl-btn" id="lbPrev">◀ Prev</button>
+              <a id="downloadBtn" class="ctrl-btn" href="#" download>Download</a>
+              <button class="ctrl-btn" id="lbNext">Next ▶</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-title">FAQ</div>
+        <div class="faq" style="display:grid;gap:12px">
+          <div class="item fade-up"><h4 style="color:var(--accent)">Does it cost anything to join?</h4><p class="muted">No. Joining our signals channel is completely free.</p></div>
+          <div class="item fade-up"><h4 style="color:var(--accent)">How many signals are provided daily?</h4><p class="muted">On average, 2-5 Gold/Forex signals per day.</p></div>
+          <div class="item fade-up"><h4 style="color:var(--accent)">What’s your win rate?</h4><p class="muted">Verified 85%+ across all trades.</p></div>
+          <div class="item fade-up"><h4 style="color:var(--accent)">How do I receive signals?</h4><p class="muted">All signals are delivered instantly via Telegram.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="container">
+        <div class="cta">
+          <h3 style="color:var(--accent);font-size:22px">Ready to Grow Your Account?</h3>
+          <p class="muted">Join thousands of traders already profiting with Prime Gold Signals.</p>
+          <div class="hero-actions" style="justify-content:center">
+            <a class="btn" href="https://t.me/LEARN_GOLD_TRADING" target="_blank" rel="noopener">Join Free Telegram</a>
+            <a class="btn" href="https://t.me/BULL_XAUUSD_TRADING" target="_blank" rel="noopener">Bull XAU/USD</a>
+            <a class="btn" href="https://t.me/goldxsign" target="_blank" rel="noopener">GOLD X Sign</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="f-grid">
+        <div>
+          <h4 style="color:var(--accent)">Prime Gold Signals</h4>
+          <p class="muted">Professional Forex & Gold signals with verified performance and community support.</p>
+        </div>
+        <div>
+          <h4 style="color:var(--accent)">Quick Links</h4>
+          <p><a href="#features">Features</a> · <a href="#performance">Performance</a> · <a href="#analysis">Analysis</a> · <a href="#faq">FAQ</a></p>
+        </div>
+        <div>
+          <h4 style="color:var(--accent)">Connect</h4>
+          <p class="muted">Join us on Telegram for instant updates and signals:</p>
+          <p style="display:flex;flex-direction:column;gap:8px">
+            <a href="https://t.me/LEARN_GOLD_TRADING" target="_blank" rel="noopener">Prime Gold Signals</a>
+            <a href="https://t.me/BULL_XAUUSD_TRADING" target="_blank" rel="noopener">BULL XAUUSD TRADING</a>
+            <a href="https://t.me/goldxsign" target="_blank" rel="noopener">goldxsign</a>
+          </p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:18px;color:var(--muted);font-size:13px">© 2025 PRIME GOLD SIGNALS. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple helper: select
+    const $ = (s, el = document) => el.querySelector(s);
+    const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+
+    // mobile nav toggle
+    const hamburger = $('#hamburger');
+    const mobilePanel = $('#mobilePanel');
+    const toggleMobile = () => {
+      const isOpen = mobilePanel.style.display === 'block';
+      mobilePanel.style.display = isOpen ? 'none' : 'block';
+      hamburger.setAttribute('aria-expanded', String(!isOpen));
+    };
+    hamburger.addEventListener('click', toggleMobile);
+    mobilePanel.addEventListener('click', (e)=>{ if(e.target.tagName === 'A') toggleMobile(); });
+
+    // reveal on scroll (fade-up)
+    const reveal = () => {
+      const items = $$('.fade-up');
+      const top = window.innerHeight * 0.85;
+      items.forEach(it => {
+        const r = it.getBoundingClientRect();
+        if (r.top < top) it.classList.add('show');
+      });
+    };
+    window.addEventListener('scroll', reveal, { passive: true });
+    window.addEventListener('load', () => { reveal(); initCarousel(); });
+
+    /* ---------- Carousel ---------- */
+    function initCarousel(){
+      const track = $('#carouselTrack');
+      if(!track) return;
+      const slides = $$('.slide', track);
+      const dotsWrap = $('#dots');
+      let index = 0;
+      let autoplay = null;
+
+      // build dots
+      slides.forEach((_,i)=>{
+        const d = document.createElement('div'); d.className='dot'; d.dataset.i=i; d.setAttribute('role','button'); d.setAttribute('aria-label', 'Go to slide ' + (i+1)); dotsWrap.appendChild(d);
+        d.addEventListener('click', ()=>{goTo(i)});
+      });
+
+      const dots = $$('.dot', dotsWrap);
+      const setActive = (i)=>{dots.forEach(d=>d.classList.toggle('active', +d.dataset.i===i));}
+
+      const update = ()=>{
+        track.style.transform = `translateX(-${index*100}%)`;
+        $$('.slide .caption', track).forEach((c,j)=>{ c.classList.toggle('show', j===index); });
+        setActive(index);
+      };
+
+      const prev = ()=>{ index = (index-1+slides.length)%slides.length; update(); }
+      const next = ()=>{ index = (index+1)%slides.length; update(); }
+      $('#prevBtn').addEventListener('click', prev);
+      $('#nextBtn').addEventListener('click', next);
+
+      // autoplay
+      const start = ()=>{ if(autoplay) clearInterval(autoplay); autoplay = setInterval(next, 5500); }
+      start();
+
+      const goTo = (i)=>{ index = i; update(); start(); }
+
+      // clicking image opens lightbox
+      slides.forEach((s,i)=>{
+        const img = $('img', s);
+        img.style.cursor='zoom-in';
+        img.addEventListener('click', ()=>openLightbox(i));
+      });
+
+      update();
+
+      // expose for lightbox
+      window.__pg_carousel = {slides, goTo, prev, next};
+    }
+
+    /* ---------- Lightbox ---------- */
+    const lightbox = $('#lightbox');
+    const lbImage = $('#lbImage');
+       const lbCaption = $('#lbCaption');
+    const downloadBtn = $('#downloadBtn');
+    let lbIndex = 0;
+
+    function openLightbox(i){
+      const slides = window.__pg_carousel.slides;
+      const slide = slides[i];
+      const imgEl = $('img', slide);
+      const capEl = $('.caption', slide);
+      lbImage.src = imgEl.src;
+      lbImage.alt = imgEl.alt || '';
+      lbCaption.textContent = capEl ? capEl.textContent : '';
+      downloadBtn.href = imgEl.src;
+      lbIndex = i;
+      lightbox.classList.add('show');
+    }
+
+    function closeLightbox(){ lightbox.classList.remove('show'); }
+    $('#lbClose').addEventListener('click', closeLightbox);
+    $('#lbNext').addEventListener('click', ()=>{ window.__pg_carousel.next(); lbIndex = (lbIndex+1)%window.__pg_carousel.slides.length; setLBFromIndex(lbIndex); });
+    $('#lbPrev').addEventListener('click', ()=>{ window.__pg_carousel.prev(); lbIndex = (lbIndex-1+window.__pg_carousel.slides.length)%window.__pg_carousel.slides.length; setLBFromIndex(lbIndex); });
+
+    function setLBFromIndex(i){ const s = window.__pg_carousel.slides[i]; const img=$('img', s); const cap=$('.caption', s); lbImage.src = img.src; lbCaption.textContent = cap ? cap.textContent : ''; downloadBtn.href = img.src; }
+
+    // close on overlay click or Esc
+    lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) closeLightbox(); });
+    document.addEventListener('keyup',(e)=>{ if(e.key==='Escape') closeLightbox(); if(e.key==='ArrowRight') { $('#lbNext').click(); } if(e.key==='ArrowLeft') { $('#lbPrev').click(); } });
+
+    /* Smooth scroll for nav */
+    document.querySelectorAll('nav a').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        e.preventDefault(); const id = a.getAttribute('href'); document.querySelector(id).scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+  </script>
+</body>
+</html>
